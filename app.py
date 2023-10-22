@@ -23,12 +23,12 @@ def server():
 
     # save the bytes to a file
     try:
-        with open('reference/result.png', 'wb') as f:
+        with open('result.png', 'wb') as f:
             f.write(image_bytes)
     except Exception as e:
         print("Error saving image: {}".format(e))
 
-    result = motionCapture.capture_motion('reference/result.png')
+    result = motionCapture.capture_motion('result.png')
     return jsonify(result)
 
 
