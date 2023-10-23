@@ -93,7 +93,20 @@ def capture_motion(result):
             return {
                 'shoulder_width_cm': shoulder_result,
                 'top_length_cm': shirt_result,
-                'leg_length_cm': leg_result
+                'leg_length_cm': leg_result,
+                'lef_shoulder_x': left_shoulder.x,
+                'lef_shoulder_y': left_shoulder.y,
+                'lef_shoulder_z': left_shoulder.z,
+                'right_shoulder_x': right_shoulder.x,
+                'right_shoulder_y': right_shoulder.y,
+                'right_shoulder_z': right_shoulder.z,
+                'right_hip_x': right_hip.x,
+                'right_hip_y': right_hip.y,
+                'right_hip_z': right_hip.z,
+                'right_ankle_x': right_ankle.x,
+                'right_ankle_y': right_ankle.y,
+                'right_ankle_z': right_ankle.z,
+
             }
 
     # Close the window after key press
