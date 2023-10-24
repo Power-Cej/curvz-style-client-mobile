@@ -22,7 +22,7 @@ def capture_motion(result):
     mp_holistic = mp.solutions.holistic
 
     # calibration factor (pixels per centimeter)
-    pixels_per_cm = 10
+    pixels_per_cm = 8
 
     # Load an image
     frame = cv2.imread(result)
@@ -76,7 +76,7 @@ def capture_motion(result):
             # calculate the outside leg
             leg_length_pixels = (right_hip.y * image_height -
                                  right_ankle.y * image_height)
-            leg_length_cm = abs(leg_length_pixels) / pixels_per_cm
+            leg_length_cm = abs(leg_length_pixels) / pixels_per_cm - 10
 
             # display measurements
             print(f'Shoulder Width (cm):---------- {shoulder_width_cm:.2f}')
