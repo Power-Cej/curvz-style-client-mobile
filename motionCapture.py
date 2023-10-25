@@ -76,7 +76,7 @@ def capture_motion(result):
             # calculate the outside leg
             leg_length_pixels = (right_hip.y * image_height -
                                  right_ankle.y * image_height)
-            leg_length_cm = abs(leg_length_pixels) / pixels_per_cm - 10
+            leg_length_cm = abs(leg_length_pixels) / pixels_per_cm
 
             # display measurements
             print(f'Shoulder Width (cm):---------- {shoulder_width_cm:.2f}')
