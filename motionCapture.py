@@ -22,7 +22,7 @@ def capture_motion(result):
     mp_holistic = mp.solutions.holistic
 
     # calibration factor (pixels per centimeter)
-    pixels_per_cm = 8
+    pixels_per_cm = 2.5
 
     # Load an image
     frame = cv2.imread(result)
@@ -88,7 +88,7 @@ def capture_motion(result):
             leg_result = int(leg_length_cm)
 
             # save holistic image
-            cv2.imwrite('reference/holistic.png', frame)
+            cv2.imwrite('images/holistic.png', frame)
 
             return {
                 'shoulder_width_cm': shoulder_result,
